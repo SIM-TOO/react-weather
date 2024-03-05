@@ -1,6 +1,7 @@
 import React from 'react'
 import useWeather from '../../utils/useWeather'
 import { useParams } from 'react-router-dom'
+import CurrentTime from './CurrentTime';
 
 const ThisDay = () => {
 
@@ -8,8 +9,8 @@ const ThisDay = () => {
   const { data, isLoading } = useWeather(id ? id : 'seoul');
 
   // 확인용
-  console.log(data);
-  console.log(isLoading);
+  // console.log(data);
+  // console.log(isLoading);
 
   const temperature = Math.round(data?.main.temp || 0);
   const cityName = data?.name;
@@ -35,13 +36,11 @@ const ThisDay = () => {
   } else if (weatherIcon === "Thunderstorm") {
     imageSrc = "./images/weatherIcons/thunderstorm.svg";
   }
-  // 테스트용
-  console.log(weatherIcon);
-
 
   return (
     <div>
 
+<CurrentTime></CurrentTime>
 
     </div>
   )

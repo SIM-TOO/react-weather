@@ -11,8 +11,9 @@ const CurrentTime = () => {
 
     // 1초 = 1000
     const currentTime = useTime(1000);
-    console.log(currentTime);
+    // console.log(currentTime);
 
+    // Intl.DateTimeFormat를 활용한 시간 가져오기
     const time = new Intl.DateTimeFormat("ko-KR", options).format(
         currentTime
     );

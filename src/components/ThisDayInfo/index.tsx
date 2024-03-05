@@ -30,21 +30,20 @@ const ThisDayInfo = () => {
   return (
     <ThisDayInfoWrapper>
       <div>
-        {imgInfo.map((img) => (
-          <ImgWrapper>
+        {imgInfo.map((img, index) => (
+          <ImgWrapper key={index}>
             <img src={img} alt="" />
           </ImgWrapper>
         ))}
       </div>
       <div>
-        {nameInfo.map((inf) => (
-          <h2>{inf}</h2>
+        {nameInfo.map((inf, index) => (
+          <h2 key={index}>{inf}</h2>
         ))}
       </div>
-
       <div>
-        {dataInfo.map((info) => (
-          <p>{info}</p>
+        {dataInfo.map((info, index) => (
+          <p key={index}>{info}</p>
         ))}
       </div>
     </ThisDayInfoWrapper>

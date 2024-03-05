@@ -13,9 +13,8 @@ const Home = () => {
             <ThisDayBlock>
                 <ThisDay />
                 <ThisDayInfo />
-                <ThisDayBlock />
-                <AllDays />
             </ThisDayBlock>
+            <AllDays />
         </HomeWrapper>
     )
 }
